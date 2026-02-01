@@ -1,4 +1,4 @@
-export default function Input({ icon, type = "text", placeholder }) {
+export default function Input({ icon, type = "text", placeholder, ...props }) {
     return (
         <div className="flex items-center gap-3 border rounded-lg px-3 py-2">
             <span className="text-gray-400">{icon}</span>
@@ -6,6 +6,7 @@ export default function Input({ icon, type = "text", placeholder }) {
                 type={type}
                 placeholder={placeholder}
                 className="w-full outline-none"
+                {...props}
             />
         </div>
     );
